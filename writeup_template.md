@@ -39,16 +39,15 @@ You're reading it!
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
 
-$$
-\left(\begin{array}{cc}
+$
+\[left(\begin{array}{cc}
 0.8944272 & 0.4472136\\
 -0.4472136 & -0.8944272
 \end{array}\right)
 \left(\begin{array}{cc}
 10 & 0\\
 0 & 5
-\end{array}\right)
-$$
+\end{array}\}
 
 
 

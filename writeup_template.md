@@ -20,7 +20,7 @@
 [image1]: ./misc_images/misc1.png
 [image2]: ./misc_images/misc3.png
 [image3]: ./misc_images/misc2.png
-[image4]: ./misc_images/dh_table.png
+[image4]: ./misc_images/image4.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.
@@ -38,11 +38,13 @@ You're reading it!
 ![alt text][image4]
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
-('The T0_1 joint angle is ', matrix([[ 1.  , -0.  ,  0.  ,  0.  ],
+The T0_1 joint angle is:
+        [ 1.  , -0.  ,  0.  ,  0.  ],
         [ 0.  ,  1.  , -0.  , -0.  ],
         [ 0.  ,  0.  ,  1.  ,  0.75],
         [ 0.  ,  0.  ,  0.  ,  1.  ]]))
-('The T1_2 joint angle is ', matrix([[  6.12323400e-17,   1.00000000e+00,   0.00000000e+00,
+The T1_2 joint angle is:
+        [  6.12323400e-17,   1.00000000e+00,   0.00000000e+00,
            3.50000000e-01],
         [ -6.12323400e-17,   3.74939946e-33,   1.00000000e+00,
            0.00000000e+00],
@@ -50,11 +52,13 @@ You're reading it!
            0.00000000e+00],
         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
            1.00000000e+00]]))
-('The T2_3 joint angle is ', matrix([[ 1.  , -0.  ,  0.  ,  1.25],
+The T2_3 joint angle is:
+        [ 1.  , -0.  ,  0.  ,  1.25],
         [ 0.  ,  1.  , -0.  , -0.  ],
         [ 0.  ,  0.  ,  1.  ,  0.  ],
         [ 0.  ,  0.  ,  0.  ,  1.  ]]))
-('The T3_4 joint angle is ', matrix([[  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
+The T3_4 joint angle is:
+        [  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
           -5.40000000e-02],
         [  0.00000000e+00,   6.12323400e-17,   1.00000000e+00,
            1.50000000e+00],
@@ -62,7 +66,8 @@ You're reading it!
            9.18485099e-17],
         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
            1.00000000e+00]]))
-('The T4_5 joint angle is ', matrix([[  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
+The T4_5 joint angle is:
+        [  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
            0.00000000e+00],
         [  0.00000000e+00,   6.12323400e-17,  -1.00000000e+00,
           -0.00000000e+00],
@@ -70,18 +75,20 @@ You're reading it!
            0.00000000e+00],
         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
            1.00000000e+00]]))
-('The T5_6 joint angle is ', matrix([[  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
+The T5_6 joint angle is:
+        [  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
            0.00000000e+00],
         [  0.00000000e+00,   6.12323400e-17,   1.00000000e+00,
            0.00000000e+00],
         [ -0.00000000e+00,  -1.00000000e+00,   6.12323400e-17,
            0.00000000e+00],
         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
-           1.00000000e+00]]))
-('The T6_EE joint angle is ', matrix([[ 1.   , -0.   ,  0.   ,  0.   ],
+           1.00000000e+00]
+The T6_EE joint angle is:
+        [ 1.   , -0.   ,  0.   ,  0.   ],
         [ 0.   ,  1.   , -0.   , -0.   ],
         [ 0.   ,  0.   ,  1.   ,  0.303],
-        [ 0.   ,  0.   ,  0.   ,  1.   ]]))
+        [ 0.   ,  0.   ,  0.   ,  1.   ]
 
 Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 --- | --- | --- | --- | ---

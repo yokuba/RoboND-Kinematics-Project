@@ -56,6 +56,7 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 And here's where you can draw out and show your math for the derivation of your theta angles.
 
 ![alt text][image2]
+![alt text][image0]
 
 ### Project Implementation
 

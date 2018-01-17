@@ -38,11 +38,26 @@ You're reading it!
 ![alt text][image4]
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
+
+$$
+\left(\begin{array}{cc}
+0.8944272 & 0.4472136\\
+-0.4472136 & -0.8944272
+\end{array}\right)
+\left(\begin{array}{cc}
+10 & 0\\
+0 & 5
+\end{array}\right)
+$$
+
+
+
+
 The T0_1 joint angle is:
-        [ 1.  , -0.  ,  0.  ,  0.  ],
-        [ 0.  ,  1.  , -0.  , -0.  ],
-        [ 0.  ,  0.  ,  1.  ,  0.75],
-        [ 0.  ,  0.  ,  0.  ,  1.  ]]))
+        [ 1.  , -0.  ,  0.  ,  0.  ]
+        [ 0.  ,  1.  , -0.  , -0.  ]
+        [ 0.  ,  0.  ,  1.  ,  0.75]
+        [ 0.  ,  0.  ,  0.  ,  1.  ]
 The T1_2 joint angle is:
         [  6.12323400e-17,   1.00000000e+00,   0.00000000e+00,
            3.50000000e-01],

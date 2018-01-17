@@ -34,11 +34,53 @@ You're reading it!
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot and derive its DH parameters.
 
-Here is an example of how to include an image in your writeup.
-
-![alt text][image1]
+![alt text][image0]
 
 #### 2. Using the DH parameter table you derived earlier, create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
+('The T0_1 joint angle is ', matrix([[ 1.  , -0.  ,  0.  ,  0.  ],
+        [ 0.  ,  1.  , -0.  , -0.  ],
+        [ 0.  ,  0.  ,  1.  ,  0.75],
+        [ 0.  ,  0.  ,  0.  ,  1.  ]]))
+('The T1_2 joint angle is ', matrix([[  6.12323400e-17,   1.00000000e+00,   0.00000000e+00,
+           3.50000000e-01],
+        [ -6.12323400e-17,   3.74939946e-33,   1.00000000e+00,
+           0.00000000e+00],
+        [  1.00000000e+00,  -6.12323400e-17,   6.12323400e-17,
+           0.00000000e+00],
+        [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           1.00000000e+00]]))
+('The T2_3 joint angle is ', matrix([[ 1.  , -0.  ,  0.  ,  1.25],
+        [ 0.  ,  1.  , -0.  , -0.  ],
+        [ 0.  ,  0.  ,  1.  ,  0.  ],
+        [ 0.  ,  0.  ,  0.  ,  1.  ]]))
+('The T3_4 joint angle is ', matrix([[  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
+          -5.40000000e-02],
+        [  0.00000000e+00,   6.12323400e-17,   1.00000000e+00,
+           1.50000000e+00],
+        [ -0.00000000e+00,  -1.00000000e+00,   6.12323400e-17,
+           9.18485099e-17],
+        [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           1.00000000e+00]]))
+('The T4_5 joint angle is ', matrix([[  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
+           0.00000000e+00],
+        [  0.00000000e+00,   6.12323400e-17,  -1.00000000e+00,
+          -0.00000000e+00],
+        [  0.00000000e+00,   1.00000000e+00,   6.12323400e-17,
+           0.00000000e+00],
+        [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           1.00000000e+00]]))
+('The T5_6 joint angle is ', matrix([[  1.00000000e+00,  -0.00000000e+00,   0.00000000e+00,
+           0.00000000e+00],
+        [  0.00000000e+00,   6.12323400e-17,   1.00000000e+00,
+           0.00000000e+00],
+        [ -0.00000000e+00,  -1.00000000e+00,   6.12323400e-17,
+           0.00000000e+00],
+        [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           1.00000000e+00]]))
+('The T6_EE joint angle is ', matrix([[ 1.   , -0.   ,  0.   ,  0.   ],
+        [ 0.   ,  1.   , -0.   , -0.   ],
+        [ 0.   ,  0.   ,  1.   ,  0.303],
+        [ 0.   ,  0.   ,  0.   ,  1.   ]]))
 
 Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 --- | --- | --- | --- | ---

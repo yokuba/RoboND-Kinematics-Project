@@ -20,10 +20,10 @@ DH_Table = {alpha0: 0, a0: 0, d1: 0.75, q1: 0,
 
 
 def TF_Matrix(alpha, a, d, q):
-    TF = Matrix([[cos(q), -sin(q), 0, a],
+    TF = Matrix([[cos(q),                     -sin(q),           0,           a],
                 [sin(q)*cos(alpha), cos(q)*cos(alpha), -sin(alpha), -sin(alpha)*d],
                 [sin(q)*sin(alpha), cos(q)*sin(alpha), cos(alpha), cos(alpha)*d],
-                [0,      0,      0,  1]])
+                [0,                                 0,          0,          1]])
     return TF
 
   # Create individual transformation matrices
@@ -49,14 +49,14 @@ y = pi
 p = - pi/2
 
 ROT_z = Matrix([[cos(y),   -sin(y), 0, 0],
-[sin(y),    cos(y), 0, 0],
-[0,         0,      1, 0],
-[0,   0, 0, 1]])
+                [sin(y),    cos(y), 0, 0],
+                [0,         0,      1, 0],
+                [0,   0, 0, 1]])
 
 ROT_y = Matrix([[cos(p),   0, sin(p), 0],
-[0,        1,  0,     0],
-[-sin(p),  0, cos(p), 0],
-[0,         0,  0,  1]]) # PITCH about the y axis
+                [0,        1,  0,     0],
+                [-sin(p),  0, cos(p), 0],
+                [0,         0,  0,  1]])  # PITCH about the y axis
 
 Rot_corr = simplify(ROT_z * ROT_y)
 
@@ -72,3 +72,20 @@ print("T0_EE: ", T0_EE.evalf(subs={q1: 0, q2: 0, q3: 0, q4: 0, q5: 0, q6: 0}))
 # Orientation correction applied to homogeneous transform between base link and end effector
 T_Total = simplify(T0_EE.evalf(subs={q1: 0, q2: 0, q3: 0, q4: 0, q5: 0, q6: 0}) * Rot_corr)
 print("T_Total: ", T_Total)
+
+r, p, y = symbols('r p y')
+
+ROT_x = Matrix([[1, 0, 0],
+        [0, cos(r), -sin(r)],
+        [0, sin(r), cos(r)]]) #ROLL
+
+ROT_y = Matrix([[cos(p),   0, sin(p)],
+        [0,        1,  0],
+        [-sin(p),  0, cos(p)]]) #PITCH
+
+
+ROT_z = Matrix([[cos(y),   -sin(y), 0],
+        [sin(y),    cos(y), 0],
+        [0,         0,      1]])  #YAW
+
+ROT_EE = ROT_z * ROT_y * ROT_x

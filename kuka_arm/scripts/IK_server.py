@@ -130,8 +130,6 @@ def handle_calculate_IK(req):
             theta5 = atan2(sqrt(R3_6[0, 2]*R3_6[0, 2] + R3_6[2, 2] * R3_6[2, 2]), R3_6[1, 2])
             theta6 = atan2(-R3_6[1, 1], R3_6[1, 0])
 
-            # optional FK
-            FK = T0_EE.evalf(subs={q1: theta1, q2: theta2, q3: theta3, q4: theta4, q5: theta5, q6: theta6})
                 # Initialize service response
             joint_trajectory_list = []
             for x in xrange(0, len(req.poses)):

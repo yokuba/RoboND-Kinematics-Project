@@ -21,7 +21,7 @@
 [image2]: ./misc_images/misc3.png
 [image3]: ./misc_images/misc2.png
 [image4]: ./misc_images/image4.png
-[image5]: ./misc_images/image5.png
+[image5]: ./misc_images/image5.jpg
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.
